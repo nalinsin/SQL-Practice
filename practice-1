@@ -1,0 +1,52 @@
+
+📝 Practice Questions (CTE-Style Thinking)
+Q1. Above Average Spenders
+You have a table project.shop.sales with:
+	• customer_id
+	• order_id
+	• amount
+👉 Write a query to return all customers whose individual order amount is greater than the average order amount across the whole table.
+
+Q2. Top 3 Customers per Month
+In project.shop.sales,
+👉 Find the top 3 customers by total spend for each month.
+(Hint: First figure out how much each customer spends in a month, then pick the top 3).
+🔹 Q3. Employee Reporting Chain (Hierarchy)
+Table: project.company.employees
+Columns:
+	• employee_id (INT)
+	• manager_id (INT, NULL if top-level)
+	• name (STRING)
+👉 Task: Show the reporting hierarchy, starting with the CEO (manager_id IS NULL) and then all employees reporting under them (direct and indirect).
+(This is a recursive problem.)
+
+🔹 Q4. Early Retention Customers
+Table: project.shop.logins
+Columns:
+	• customer_id (STRING)
+	• login_date (DATE)
+👉 Task: Find customers whose first login date is followed by another login within 30 days.
+(You’ll need to find first login per customer, then check conditions.)
+
+🔹 Q5. High-Value Transaction Stats
+Table: project.bank.transactions
+Columns:
+	• txn_id (STRING)
+	• customer_id (STRING)
+	• amount (NUMERIC)
+	• txn_date (DATE)
+👉 Task: From transactions where amount > 5000:
+	1. Count how many such transactions exist.
+	2. Find the maximum transaction amount among them.
+(One filtered subset, reused for multiple outputs.)
+
+🔹 Q6. Suspicious Transaction Pattern (Smurfing Detection)
+Table: project.bank.transactions
+Columns:
+	• txn_id (STRING)
+	• customer_id (STRING)
+	• amount (NUMERIC)
+	• txn_date (DATE)
+	• txn_time (TIMESTAMP)
+👉 Task: Find customers who made 3 or more transactions under 10,000 on the same date, and calculate their total daily amount.
+
