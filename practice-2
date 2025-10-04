@@ -1,0 +1,48 @@
+💡 SQL INTERVIEW PRACTICE SET (For Experienced Engineers – GCP Focus)
+These questions will strengthen your practical & problem-solving depth across your notebook’s structure — from fundamentals to optimization.
+
+📘 Section 1: Fundamentals
+(Concepts: SELECT, WHERE, ORDER BY, DISTINCT)
+	1. Retrieve all transactions above ₹10,000 made in September 2025, ordered by amount descending.
+	2. Get a list of all distinct customer IDs who made any transaction.
+	3. Find all customers whose name starts with “A” and ends with “n”.
+	4. From a products table, return only the top 5 most expensive items.
+
+📗 Section 2: Aggregations
+(Concepts: GROUP BY, HAVING, COUNT, SUM, AVG)
+	5. From a transactions table: find total transaction amount per customer.
+	6. Find customers who made more than 3 transactions in a single day.
+	7. Calculate average, min, and max transaction amount per branch.
+	8. Get revenue per month for 2025, sorted by month.
+	9. Identify top 3 branches by total revenue.
+
+📙 Section 3: Joins
+(Concepts: INNER, LEFT, FULL JOIN)
+	10. Combine customers and transactions to show all customers, including those who never transacted.
+	11. Find all customers who have made a transaction but are not in the “premium” segment.
+	12. Join transactions, accounts, and branches to show the branch name and total transaction value.
+	13. Get all customers who have transactions in two or more different branches.
+
+📕 Section 4: Intermediate Skills
+(Concepts: CASE WHEN, Subqueries, CTEs, UNION)
+	14. Using CASE WHEN, tag transactions as:
+	• 'High' if amount > 10,000
+	• 'Medium' if between 5,000–10,000
+	• 'Low' otherwise
+	15. Find customers who spent more than the average transaction amount (using a subquery).
+	16. Using a CTE, calculate total and average amount per customer, then list only those above ₹20,000 total.
+	17. Combine customer data from two regions (region_west, region_east) using UNION ALL, and then deduplicate with UNION.
+
+📒 Section 5: Advanced Analytical
+(Concepts: Window functions, Cohort, Rolling averages)
+	18. Using ROW_NUMBER(), find the latest transaction for each customer.
+	19. Calculate the rank of customers based on their total spend.
+	20. Using LAG(), calculate the gap (in days) between consecutive transactions for each customer.
+	21. Compute a 7-day rolling average of total transaction amount.
+	22. Find monthly customer retention: number of customers active this month who were also active last month.
+
+📓 Section 6: Optimization & Real-world
+(Concepts: Performance, Query design)
+	23. Rewrite a query that uses multiple nested subqueries into one clean CTE chain.
+	24. Find the performance difference between COUNT(*) and COUNT(column) in BigQuery (experiment-based).
+	25. Use the EXPLAIN plan to find the cost of a query joining three tables; identify how you’d optimize it.

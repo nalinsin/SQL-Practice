@@ -50,3 +50,7 @@ Columns:
 	• txn_time (TIMESTAMP)
 👉 Task: Find customers who made 3 or more transactions under 10,000 on the same date, and calculate their total daily amount.
 
+############################################################################################
+
+Answers
+
